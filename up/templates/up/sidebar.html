@@ -1,0 +1,61 @@
+  {% load static %}
+<div id="aside" class="app-aside modal fade folded md nav-expand">
+  	<div class="left navside indigo-900 dk" layout="column">
+      <div class="navbar navbar-md no-radius">
+        <!-- brand -->
+        <a class="navbar-brand">
+        	<div ui-include="{% static 'up/assets/images/logo.svg' %}"></div>
+        	<img src="{% static 'up/assets/images/logo.png' %}" alt="." class="hide">
+        	<span class="hidden-folded inline">Service <br> d'auscultation</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <div flex class="hide-scroll">
+        <nav class="scroll nav-active-primary">
+
+            <ul class="nav" ui-nav>
+              <li class="nav-header hidden-folded">
+                <small class="text-muted">Menu</small>
+              </li>
+
+              <li>
+                <a href="{% url 'index' %}" >
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe5c3;
+                    </i>
+                  </span>
+                  <span class="nav-text">Acceuil</span>
+                </a>
+              </li>
+   <li>
+                <a href="{% url 'barrages' %}" >
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe3fc;
+                    </i>
+                  </span>
+                  <span class="nav-text">Barrages</span>
+                </a>
+              </li>
+
+
+
+              <li>
+                <a href="{% url 'rapports' %}" >
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe8d2;
+                    </i>
+                  </span>
+                  <span class="nav-text">Rapports</span>
+                </a>
+              </li>
+
+
+
+            </ul>
+        </nav>
+      </div>
+      <div flex-no-shrink>
+        <div ui-include="'{% static 'up/views/blocks/aside.bottom.0.html'"></div>
+      </div>
+    </div>
+  </div>

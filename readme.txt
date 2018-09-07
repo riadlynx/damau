@@ -1,0 +1,1 @@
+This is a simple project i wrote for my cousin who is a civil engineer, this web app takes data generated from a device and applies some mathematics methodes to it then do a linear regression and data visualisation.

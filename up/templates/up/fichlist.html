@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="utf-8" />
+  <title>Flatkit - HTML Version | Bootstrap 4 Web App Kit with AngularJS</title>
+  <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="{% static 'up/assets/images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="{% static 'up/assets/images/logo.png">
+
+  <!-- style -->
+  <link rel="stylesheet" href="{% static 'up/assets/animate.css/animate.min.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'up/assets/glyphicons/glyphicons.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'up/assets/font-awesome/css/font-awesome.min.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'up/assets/material-design-icons/material-design-icons.css' %}" type="text/css" />
+
+  <link rel="stylesheet" href="{% static 'up/assets/bootstrap/dist/css/bootstrap.min.css' %}" type="text/css" />
+  <!-- build:css {% static 'up/assets/styles/app.min.css -->
+  <link rel="stylesheet" href="{% static 'up/assets/styles/app.css' %}" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="{% static 'up/assets/styles/font.css' %}" type="text/css" />
+</head>
+<body>
+  <div class="app" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- aside -->
+{% include 'up/sidebar.html' %}
+    <!-- / aside -->
+ {% include 'up/header_foot.html' %}
+
+  <!-- content -->
+
+            <!-- / navbar right -->
+
+
+<!-- ############ PAGE START-->
+<div class="padding">
+	<div class="margin">
+		<h5 class="m-b-0 _300">Hi Jone, Welcome back</h5>
+		<small class="text-muted">Awesome uikit for your next project</small>
+	</div>
+	<div class="row">
+<div class="col-sm-6">
+      <p class="m-a-0 m-b">Liste des fichiers</p>
+      <div class="list-group m-b">
+{% for fichier in fichs %}
+
+<a href="{% url 'graph' fichier.id %}" class="list-group-item">
+          <span class="pull-right label success">5</span>
+                {{ fichier }}
+        </a>
+{% endfor %}
+<a href="{% url 'graph' 2 %}" class="list-group-item">
+    <span class="pull-right label info"><a href="{% url 'fichdelete' 2 %}">supprimer</a></span>
+        </a>
+
+
+      </div>
+
+    </div>
+
+      <div class="col-sm-6">
+        <h3>Nouveau Fichier:</h3><br/>
+<form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+         {{ form }}
+ <button type="submit" class="btn info">Envoyer</button>
+          </div>
+        </div>
+      </form>
+      </div>
+</div>
+
+
+	</div>
+
+</div>
+
+<!-- ############ PAGE END-->
+
+
+<!-- ############ LAYOUT END-->
+
+  </div>
+<!-- build:js scripts/app.html.js' %} -->
+<!-- jQuery -->
+  <script src="{% static 'up/libs/jquery/jquery/dist/jquery.js' %}' %}"></script>
+<!-- Bootstrap -->
+  <script src="{% static 'up/libs/jquery/tether/dist/js/tether.min.js' %}"></script>
+  <script src="{% static 'up/libs/jquery/bootstrap/dist/js/bootstrap.js' %}"></script>
+<!-- core -->
+  <script src="{% static 'up/libs/jquery/underscore/underscore-min.js' %}"></script>
+  <script src="{% static 'up/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js' %}"></script>
+  <script src="{% static 'up/libs/jquery/PACE/pace.min.js' %}"></script>
+
+  <script src="{% static 'up/scripts/config.lazyload.js' %}"></script>
+
+  <script src="{% static 'up/scripts/palette.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-load.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-jp.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-include.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-device.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-form.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-nav.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-screenfull.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-scroll-to.js' %}"></script>
+  <script src="{% static 'up/scripts/ui-toggle-class.js' %}"></script>
+
+  <script src="{% static 'up/scripts/app.js' %}"></script>
+
+  <!-- ajax -->
+  <script src="{% static 'up/libs/jquery/jquery-pjax/jquery.pjax.js' %}"></script>
+  <script src="{% static 'up/scripts/ajax.js' %}"></script>
+<!-- endbuild -->
+</body>
+</html>
+
+
+
+
