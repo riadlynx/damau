@@ -12,4 +12,4 @@ how it works:
 4_Add a new instrument
 5_Upload files, and Voilaa:
 
-
+![alt text](https://github.com/riadlynx/damau/blob/master/demo.png)
